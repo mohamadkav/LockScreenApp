@@ -30,11 +30,11 @@ public final class R {
 	public static final class id {
 		public static final int lock_height = 0x7f0d0020;
 		public static final int lock_width = 0x7f0d0021;
-		public static final int pl_button_container = 0x7f0d0066;
-		public static final int pl_left_button = 0x7f0d0067;
-		public static final int pl_message_text = 0x7f0d0064;
-		public static final int pl_pattern = 0x7f0d0065;
-		public static final int pl_right_button = 0x7f0d0068;
+		public static final int pl_button_container = 0x7f0d0067;
+		public static final int pl_left_button = 0x7f0d0068;
+		public static final int pl_message_text = 0x7f0d0065;
+		public static final int pl_pattern = 0x7f0d0066;
+		public static final int pl_right_button = 0x7f0d0069;
 		public static final int square = 0x7f0d0022;
 	}
 	public static final class layout {

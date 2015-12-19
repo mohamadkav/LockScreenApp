@@ -49,4 +49,14 @@
         android:layout_marginTop="116dp"
         android:onClick="setPattern"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Pattern to Confirm"
+        android:id="@+id/confirmButton"
+        android:layout_below="@+id/setPattern"
+        android:layout_alignRight="@+id/deviceAdminButton"
+        android:layout_alignEnd="@+id/deviceAdminButton"
+        android:onClick="confirmPattern"/>
+
 </RelativeLayout><!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/layout/activity_lockscreen.xml -->
