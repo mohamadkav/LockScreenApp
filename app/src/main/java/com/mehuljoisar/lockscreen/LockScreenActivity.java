@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.mehuljoisar.lockscreen.utils.LockscreenService;
 import com.mehuljoisar.lockscreen.utils.LockscreenUtils;
@@ -73,6 +75,11 @@ public class LockScreenActivity extends Activity implements
 						PhoneStateListener.LISTEN_CALL_STATE);
 
 			} catch (Exception e) {
+                Toast t=Toast.makeText(this, "لطفا به برنامه، اجازه دسترسی بدهید", Toast.LENGTH_LONG);
+                t.show();
+                Intent i=new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                startActivity(i);
+                e.printStackTrace();
 			}
 
 		}

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Build;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +24,7 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
 		if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)
 				|| intent.getAction().equals(Intent.ACTION_SCREEN_ON)
 				|| intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-			startLockScreen(context);
+            startLockScreen(context);
 		}
 
 	}
@@ -60,6 +61,7 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 			wm.addView(mTopView, params);
 		}catch (Exception e) {
+            e.printStackTrace();
 		}
 //		Intent mIntent = new Intent(context, LockScreenActivity.class);
 //		mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
