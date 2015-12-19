@@ -2,11 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Mohammad\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-51eb7d59b7d0d2518d41b47955a63160401efd4d.jar" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c2907f56a3ceeca8137e07623e495633ab5daa8e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\LockScreenApp\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="385fd99a9e7786b2706f8c76e35979f75bb9c8f1">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-be8f5963896fcc078cf518cc929e724ef557931c.jar" />
     </item>
     <item
         jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
@@ -16,18 +23,18 @@
         <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-286d0baff683489b044df953c3c418a9625208f7.jar" />
     </item>
     <item
-        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c2907f56a3ceeca8137e07623e495633ab5daa8e.jar" />
-    </item>
-    <item
         jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
         <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-fe85cc3f7c15fcee816d40e74fb6630d17e3dec0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mohammad\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-51eb7d59b7d0d2518d41b47955a63160401efd4d.jar" />
     </item>
 
 </items>

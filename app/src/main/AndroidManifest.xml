@@ -29,6 +29,25 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".pattern.SetPatternActivity"
+            android:label="@string/set_pattern_title"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".app.PatternLockActivity" />
+        </activity>
+
+        <activity
+            android:name=".pattern.ConfirmPatternActivity"
+            android:label="@string/confirm_pattern_title"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".pattern.ResetPatternActivity"
+            android:label="@string/reset_pattern_title"
+            android:launchMode="singleTop" />
+
         <service android:name=".utils.LockscreenService" >
         </service>
 

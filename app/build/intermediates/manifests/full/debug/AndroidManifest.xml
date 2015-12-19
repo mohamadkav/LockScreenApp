@@ -5,7 +5,7 @@
     android:versionName="1.2" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
@@ -30,6 +30,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.mehuljoisar.lockscreen.pattern.SetPatternActivity"
+            android:label="@string/set_pattern_title"
+            android:launchMode="singleTop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".app.PatternLockActivity" />
+        </activity>
+        <activity
+            android:name="com.mehuljoisar.lockscreen.pattern.ConfirmPatternActivity"
+            android:label="@string/confirm_pattern_title"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.mehuljoisar.lockscreen.pattern.ResetPatternActivity"
+            android:label="@string/reset_pattern_title"
+            android:launchMode="singleTop" />
 
         <service android:name="com.mehuljoisar.lockscreen.utils.LockscreenService" >
         </service>

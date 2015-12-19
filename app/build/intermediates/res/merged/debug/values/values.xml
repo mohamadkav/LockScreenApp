@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="pref_entries_theme">
+        <item>Holo Dark</item>
+        <item>Holo Light</item>
+    </string-array>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/values/arrays.xml -->
+    <eat-comment/>
+    <string-array name="pref_entry_values_theme" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
     <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -96,6 +108,8 @@
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
+    <declare-styleable name="PatternLockTheme"><attr format="reference" name="patternViewStyle"/></declare-styleable>
+    <declare-styleable name="PatternView"><attr name="aspect"><enum name="square" value="0"/><enum name="lock_width" value="1"/><enum name="lock_height" value="2"/></attr><attr format="color|reference" name="regularColor"/><attr format="color|reference" name="errorColor"/><attr format="color|reference" name="successColor"/><attr format="color|reference" name="pathColor"/><attr format="reference" name="dotDrawableDefault"/><attr format="reference" name="dotDrawableTouched"/><attr format="reference" name="circleDrawableDefault"/><attr format="reference" name="circleDrawable"/><attr format="reference" name="arrowUpDrawable"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
@@ -221,8 +235,55 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="about_credit">Zhang Hai 2015</string>
+    <string name="about_github"><a href="https://github.com/DreaminginCodeZH/PatternLock">View on GitHub</a></string>
+    <string name="about_name">PatternLock Library</string>
+    <string name="about_title">About</string>
+    <string name="about_version">Version %1$s</string>
     <string name="app_name">LockScreenApp</string>
+    <string name="confirm_pattern_title">Confirm your unlock pattern</string>
     <string name="instructions">Click on UNLOCK button to unlock the screen</string>
+    <string name="main_title">@string/app_name</string>
+    <string name="pattern_cleared">Unlock pattern has been cleared</string>
+    <string name="pattern_lock_title">Pattern lock</string>
+    <string name="pattern_reset">Unlock pattern has been reset</string>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/build/intermediates/exploded-aar/LockScreenApp/library/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <string name="pl_access_pattern_cell_added">Cell added</string>
+    <string name="pl_access_pattern_cleared">Pattern cleared</string>
+    <string name="pl_access_pattern_detected">Pattern completed</string>
+    <string name="pl_access_pattern_start">Pattern started</string>
+    <string name="pl_cancel">Cancel</string>
+    <string name="pl_confirm">Confirm</string>
+    <string name="pl_confirm_pattern">Draw the pattern again to confirm</string>
+    <string name="pl_continue">Continue</string>
+    <string name="pl_draw_pattern">Draw an unlock pattern</string>
+    <string name="pl_draw_pattern_to_unlock">Draw pattern to unlock</string>
+    <string name="pl_forgot_pattern">Forgot pattern</string>
+    <string name="pl_pattern_confirmed">Your new unlock pattern</string>
+    <string name="pl_pattern_recorded">Pattern recorded</string>
+    <string name="pl_pattern_too_short">Connect at least %d dots, please redraw</string>
+    <string name="pl_recording_pattern">Release finger when done</string>
+    <string name="pl_redraw">Redraw</string>
+    <string name="pl_wrong_pattern">Wrong pattern, please retry</string>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="pref_dialog_message_clear_pattern">Clear unlock pattern?</string>
+    <string name="pref_dialog_title_theme">Select theme</string>
+    <string name="pref_summary_pattern_visible_off">Pattern will be hidden when drawing</string>
+    <string name="pref_summary_pattern_visible_on">Pattern will be visible when drawing</string>
+    <string name="pref_summary_set_pattern_has">[ Pattern set ]</string>
+    <string name="pref_summary_set_pattern_none">[ No pattern set ]</string>
+    <string name="pref_summary_theme">[ %1$s ]</string>
+    <string name="pref_title_about">About</string>
+    <string name="pref_title_clear_pattern">Clear unlock pattern</string>
+    <string name="pref_title_pattern_lock">Pattern lock</string>
+    <string name="pref_title_pattern_visible">Make pattern visible</string>
+    <string name="pref_title_set_pattern">Set unlock pattern</string>
+    <string name="pref_title_theme">Theme</string>
+    <string name="reset_pattern_message">This is only a demo.\n\nPress "OK" to reset your unlock pattern.</string>
+    <string name="reset_pattern_title">Confirm password to reset pattern</string>
+    <string name="set_pattern_title">Set unlock pattern</string>
     <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -235,6 +296,18 @@
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="android:Theme.Holo">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="patternViewStyle">@style/PatternView.Holo</item>
+    </style>
+    <style name="AppTheme.Light" parent="android:Theme.Holo.Light">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="patternViewStyle">@style/PatternView.Holo.Light</item>
+    </style>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -1157,6 +1230,27 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/build/intermediates/exploded-aar/LockScreenApp/library/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <style name="PatternView">
+        <item name="aspect">square</item>
+    </style>
+    <style name="PatternView.Holo">#
+        <item name="regularColor">@android:color/white</item>
+        <item name="errorColor">@android:color/holo_red_light</item>
+        <item name="successColor">@android:color/white</item>
+        <item name="pathColor">@android:color/white</item>
+        <item name="dotDrawableDefault">@drawable/pl_patternview_dot_default</item>
+        <item name="dotDrawableTouched">@drawable/pl_patternview_dot_touched</item>
+        <item name="circleDrawableDefault">@drawable/pl_patternview_circle_default_alpha</item>
+        <item name="circleDrawable">@drawable/pl_patternview_circle_alpha</item>
+        <item name="arrowUpDrawable">@drawable/pl_patternview_arrow_alpha</item>
+    </style>
+    <style name="PatternView.Holo.Light">
+        <item name="regularColor">@android:color/holo_blue_dark</item>
+        <item name="successColor">@android:color/holo_blue_dark</item>
+        <item name="pathColor">@android:color/holo_blue_dark</item>
     </style>
     <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>

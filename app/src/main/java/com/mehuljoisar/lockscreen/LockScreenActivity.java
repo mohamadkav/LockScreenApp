@@ -15,6 +15,7 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.mehuljoisar.lockscreen.pattern.SetPatternActivity;
 import com.mehuljoisar.lockscreen.utils.LockscreenService;
 import com.mehuljoisar.lockscreen.utils.LockscreenUtils;
 import com.mehuljoisar.lockscreen.utils.PolicyManager;
@@ -44,7 +45,7 @@ public class LockScreenActivity extends Activity implements
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		this.getWindow().setType(
-                WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+				WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_lockscreen);
@@ -90,17 +91,22 @@ public class LockScreenActivity extends Activity implements
 		btnUnlock = (Button) findViewById(R.id.btnUnlock);
 		btnUnlock.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // unlock home button and then screen on button press
-                unlockHomeButton();
-            }
-        });
+			@Override
+			public void onClick(View v) {
+				// unlock home button and then screen on button press
+				unlockHomeButton();
+			}
+		});
 	}
     public void handleAdminButton(View v) {
         if(!PolicyManager.getInstance(v.getContext()).isAdminActive())
             PolicyManager.getInstance(v.getContext()).showAdminScreen(this);
     }
+
+	public void setPattern(View v) {
+		Intent i=new Intent(this, SetPatternActivity.class);
+        startActivity(i);
+	}
 
 	// Handle events of calls and unlock screen if necessary
 	private class StateListener extends PhoneStateListener {
