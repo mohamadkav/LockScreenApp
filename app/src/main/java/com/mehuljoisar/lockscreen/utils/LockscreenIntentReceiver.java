@@ -12,9 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mehuljoisar.lockscreen.PatternListener;
 import com.mehuljoisar.lockscreen.R;
+
+import me.zhanghai.patternlock.PatternView;
+import me.zhanghai.patternlock.ViewAccessibilityCompat;
 
 public class LockscreenIntentReceiver extends BroadcastReceiver {
 
@@ -29,6 +35,7 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
 
 	}
 	public static ViewGroup mTopView =null;
+    public static ViewGroup patternViewGroup =null;
 	// Display lock screen
 	private void startLockScreen(Context context) {
 		try {
@@ -44,6 +51,25 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
 					PixelFormat.TRANSLUCENT);
 			params.gravity = Gravity.RIGHT | Gravity.TOP;
 			mTopView = (ViewGroup) LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.alarm, null);
+            patternViewGroup = (ViewGroup) LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.pl_base_pattern_activity, null);
+            TextView messageText;
+            PatternView patternView;
+            LinearLayout buttonContainer;
+            Button leftButton;
+            Button rightButton;
+            messageText = (TextView)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_message_text);
+            patternView = (PatternView)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_pattern);
+            buttonContainer = (LinearLayout)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_button_container);
+            leftButton = (Button)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_left_button);
+            rightButton = (Button)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_right_button);
+            messageText.setText(me.zhanghai.patternlock.R.string.pl_draw_pattern_to_unlock);
+            PatternListener pl=new PatternListener(patternView,messageText,wm,patternViewGroup,context);
+            patternView.setInStealthMode(pl.isStealthModeEnabled());
+            patternView.setOnPatternListener(pl);
+            leftButton.setText(me.zhanghai.patternlock.R.string.pl_cancel);
+            rightButton.setText(me.zhanghai.patternlock.R.string.pl_forgot_pattern);
+            ViewAccessibilityCompat.announceForAccessibility(messageText, messageText.getText());
+
             mTopView.findViewById(R.id.unlockbutton).setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -59,6 +85,7 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+            wm.addView(patternViewGroup,params);
 			wm.addView(mTopView, params);
 		}catch (Exception e) {
             e.printStackTrace();

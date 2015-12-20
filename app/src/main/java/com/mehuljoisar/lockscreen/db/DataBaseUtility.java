@@ -22,13 +22,37 @@ public class DataBaseUtility {
             } catch (Exception e) {
                 instance.db = instance.context.openOrCreateDatabase("lockscreenapp", Context.MODE_PRIVATE, null);
             }
-            instance.db.execSQL("CREATE TABLE IF NOT EXISTS ALARMID(id INTEGER PRIMARY KEY,alarm_id VARCHAR);");
+            instance.db.execSQL("CREATE TABLE IF NOT EXISTS PATTERN(id INTEGER PRIMARY KEY,pattern VARCHAR);");
         }
         return instance;
     }
-    public void addAlarmId(String alarmId){
+    public void setOrUpdatePattern(String pattern){
+        ArrayList<String> array_list=new ArrayList<>();
+        Cursor res =  db.rawQuery( "select * from PATTERN", null );
+        res.moveToFirst();
+        while(!res.isAfterLast()){
+            array_list.add(res.getString(res.getColumnIndex("serial")));
+            res.moveToNext();
+        }
         ContentValues contentValues=new ContentValues();
-        contentValues.put("alarm_id", alarmId+"");
-        db.insert("ALARMID", null, contentValues);
+        contentValues.put("pattern", pattern);
+        if(array_list.size()>0)
+            db.execSQL("UPDATE PATTERN SET serial='"+pattern+"' WHERE id=1 ");
+        else
+            db.insert("PATTERN", null, contentValues);
+        res.close();
+    }
+    public String getPattern(){
+        ArrayList<String> array_list=new ArrayList<>();
+        Cursor res =  db.rawQuery( "select * from PATTERN", null );
+        res.moveToFirst();
+        while(!res.isAfterLast()){
+            array_list.add(res.getString(res.getColumnIndex("pattern")));
+            res.moveToNext();
+        }
+        res.close();
+        if(array_list.isEmpty())
+            return null;
+        return array_list.get(0).toString();
     }
 }

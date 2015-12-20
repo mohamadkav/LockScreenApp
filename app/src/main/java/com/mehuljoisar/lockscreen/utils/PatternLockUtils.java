@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
+import com.mehuljoisar.lockscreen.db.DataBaseUtility;
 import com.mehuljoisar.lockscreen.pattern.ConfirmPatternActivity;
 import com.mehuljoisar.lockscreen.pattern.SetPatternActivity;
 
@@ -23,8 +24,9 @@ public class PatternLockUtils {
     public static final int REQUEST_CODE_CONFIRM_PATTERN = 19951208;
 
     public static void setPattern(List<PatternView.Cell> pattern, Context context) {
-        PreferenceUtils.putString(PreferenceContract.KEY_PATTERN_SHA1,
-                PatternUtils.patternToSha1String(pattern), context);
+        DataBaseUtility.getInstance(context).setOrUpdatePattern(PatternUtils.patternToSha1String(pattern));
+//        PreferenceUtils.putString(PreferenceContract.KEY_PATTERN_SHA1,
+//                PatternUtils.patternToSha1String(pattern), context);
     }
 
     private static String getPatternSha1(Context context) {
@@ -37,7 +39,11 @@ public class PatternLockUtils {
     }
 
     public static boolean isPatternCorrect(List<PatternView.Cell> pattern, Context context) {
-        return TextUtils.equals(PatternUtils.patternToSha1String(pattern), getPatternSha1(context));
+        String origPattern=DataBaseUtility.getInstance(context).getPattern();
+        if(origPattern.equals(PatternUtils.patternToSha1String(pattern)))
+            return true;
+        else
+            return false;
     }
 
     public static void clearPattern(Context context) {
