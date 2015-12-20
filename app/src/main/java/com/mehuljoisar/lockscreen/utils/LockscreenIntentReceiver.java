@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.mehuljoisar.lockscreen.PatternListener;
 import com.mehuljoisar.lockscreen.R;
+import com.mehuljoisar.lockscreen.db.DataBaseUtility;
 
 import me.zhanghai.patternlock.PatternView;
 import me.zhanghai.patternlock.ViewAccessibilityCompat;
@@ -39,6 +40,7 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
 	// Display lock screen
 	private void startLockScreen(Context context) {
 		try {
+            DataBaseUtility.getInstance(context);
 			if(mTopView!=null)
 				return;
 			final WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
