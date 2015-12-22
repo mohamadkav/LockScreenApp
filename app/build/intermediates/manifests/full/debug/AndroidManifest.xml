@@ -35,9 +35,6 @@
             android:name="com.mehuljoisar.lockscreen.pattern.SetPatternActivity"
             android:label="@string/set_pattern_title"
             android:launchMode="singleTop" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".app.PatternLockActivity" />
         </activity>
         <activity
             android:name="com.mehuljoisar.lockscreen.pattern.ConfirmPatternActivity"

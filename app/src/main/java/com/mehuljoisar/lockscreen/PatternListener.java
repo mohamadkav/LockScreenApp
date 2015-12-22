@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.mehuljoisar.lockscreen.utils.LockscreenIntentReceiver;
 import com.mehuljoisar.lockscreen.utils.PatternLockUtils;
 import com.mehuljoisar.lockscreen.utils.PreferenceContract;
 import com.mehuljoisar.lockscreen.utils.PreferenceUtils;
@@ -84,6 +85,8 @@ public class PatternListener implements PatternView.OnPatternListener {
 
     protected void onConfirmed() {
         wm.removeViewImmediate(toRemove);
+        //TODO: TOF
+        LockscreenIntentReceiver.patternViewGroup=null;
     }
 
     protected void onWrongPattern() {

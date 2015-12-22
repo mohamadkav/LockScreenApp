@@ -57,7 +57,7 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
 					PixelFormat.TRANSLUCENT);
 			params.gravity = Gravity.RIGHT | Gravity.TOP;
 			mTopView = (ViewGroup) LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.alarm, null);
-            patternViewGroup = (ViewGroup) LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.pl_base_pattern_activity, null);
+            patternViewGroup = (ViewGroup) LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.pl_base_pattern_activity_view, null);
             TextView messageText;
             PatternView patternView;
             LinearLayout buttonContainer;
@@ -65,26 +65,21 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
             Button rightButton;
             messageText = (TextView)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_message_text);
             patternView = (PatternView)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_pattern);
-            buttonContainer = (LinearLayout)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_button_container);
-            leftButton = (Button)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_left_button);
-            rightButton = (Button)patternViewGroup.findViewById(me.zhanghai.patternlock.R.id.pl_right_button);
             messageText.setText(me.zhanghai.patternlock.R.string.pl_draw_pattern_to_unlock);
             PatternListener pl=new PatternListener(patternView,messageText,wm,patternViewGroup,context);
             patternView.setInStealthMode(pl.isStealthModeEnabled());
             patternView.setOnPatternListener(pl);
-            leftButton.setText(me.zhanghai.patternlock.R.string.pl_cancel);
-            rightButton.setText(me.zhanghai.patternlock.R.string.pl_forgot_pattern);
             ViewAccessibilityCompat.announceForAccessibility(messageText, messageText.getText());
 
             mTopView.findViewById(R.id.unlockbutton).setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					wm.removeViewImmediate(mTopView);
-					mTopView = null;
-				}
-			});
+                @Override
+                public void onClick(View v) {
+                    patternViewGroup.removeView(mTopView);
+                    mTopView = null;
+                }
+            });
             wm.addView(patternViewGroup,params);
-			wm.addView(mTopView, params);
+            patternViewGroup.addView(mTopView, params);
 		}catch (Exception e) {
             e.printStackTrace();
 		}
