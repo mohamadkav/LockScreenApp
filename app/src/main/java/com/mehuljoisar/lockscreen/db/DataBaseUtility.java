@@ -6,6 +6,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.mehuljoisar.lockscreen.base.ApplicationClass;
+
 import java.util.ArrayList;
 
 public class DataBaseUtility {
@@ -18,9 +20,17 @@ public class DataBaseUtility {
             instance = new DataBaseUtility();
             instance.context = con;
             try {
-                instance.db = instance.context.getApplicationContext().openOrCreateDatabase("lockscreenapp", Context.MODE_PRIVATE, null);
+                instance.db= ApplicationClass.getInstance().openOrCreateDatabase("lockscreenapp", Context.MODE_PRIVATE, null);
             } catch (Exception e) {
-                instance.db = instance.context.openOrCreateDatabase("lockscreenapp", Context.MODE_PRIVATE, null);
+                try{
+                    instance.db = instance.context.getApplicationContext().openOrCreateDatabase("lockscreenapp", Context.MODE_PRIVATE, null);
+                }catch (Exception ex){
+                    try{
+                        instance.db = instance.context.openOrCreateDatabase("lockscreenapp", Context.MODE_PRIVATE, null);
+                    }catch (Exception exe){
+                        exe.printStackTrace();
+                    }
+                }
             }
             instance.db.execSQL("CREATE TABLE IF NOT EXISTS PATTERN(id INTEGER PRIMARY KEY,pattern VARCHAR);");
         }
@@ -31,13 +41,13 @@ public class DataBaseUtility {
         Cursor res =  db.rawQuery( "select * from PATTERN", null );
         res.moveToFirst();
         while(!res.isAfterLast()){
-            array_list.add(res.getString(res.getColumnIndex("serial")));
+            array_list.add(res.getString(res.getColumnIndex("pattern")));
             res.moveToNext();
         }
         ContentValues contentValues=new ContentValues();
         contentValues.put("pattern", pattern);
         if(array_list.size()>0)
-            db.execSQL("UPDATE PATTERN SET serial='"+pattern+"' WHERE id=1 ");
+            db.execSQL("UPDATE PATTERN SET pattern='"+pattern+"' WHERE id=1 ");
         else
             db.insert("PATTERN", null, contentValues);
         res.close();
