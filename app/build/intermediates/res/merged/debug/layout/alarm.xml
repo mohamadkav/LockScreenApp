@@ -1,38 +1,42 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.mehuljoisar.lockscreen.lib.ResideLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#000000"
-    tools:context="io.github.homelocker.app.MainActivity"
-    android:theme="@android:style/Theme.NoTitleBar">
+    android:id="@+id/reside_layout"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="قفل شد"
-        android:textStyle="bold"
-        android:textSize="60dp"
-        android:textColor="#FF0000"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp" />
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="بازکن"
-        android:id="@+id/unlockbutton"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:onClick="unlock"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/stars"
+            android:scaleType="centerCrop"/>
 
 
-</RelativeLayout>
-<!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/layout/alarm.xml -->
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/balloon"
+            android:id="@+id/imageView"/>
+        <com.mehuljoisar.lockscreen.shimmer.ShimmerTextView
+            android:id="@+id/shimmer_tv"
+            android:text="Slide to Unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#444"
+            android:textSize="50sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="112dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</com.mehuljoisar.lockscreen.lib.ResideLayout><!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/app/src/main/res/layout/alarm.xml -->

@@ -7,6 +7,7 @@ int attr dotDrawableTouched 0x7f010007
 int attr errorColor 0x7f010003
 int attr pathColor 0x7f010005
 int attr patternViewStyle 0x7f010000
+int attr reflectionColor 0x7f01000b
 int attr regularColor 0x7f010002
 int attr successColor 0x7f010004
 int drawable pl_patternview_arrow_alpha 0x7f020000
@@ -57,3 +58,5 @@ int styleable PatternView_errorColor 2
 int styleable PatternView_pathColor 4
 int styleable PatternView_regularColor 1
 int styleable PatternView_successColor 3
+int[] styleable ShimmerView { 0x7f01000b }
+int styleable ShimmerView_reflectionColor 0

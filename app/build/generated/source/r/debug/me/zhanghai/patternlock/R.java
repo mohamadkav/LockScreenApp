@@ -17,24 +17,25 @@ public final class R {
 		public static final int errorColor = 0x7f01003a;
 		public static final int pathColor = 0x7f01003c;
 		public static final int patternViewStyle = 0x7f010037;
+		public static final int reflectionColor = 0x7f010051;
 		public static final int regularColor = 0x7f010039;
 		public static final int successColor = 0x7f01003b;
 	}
 	public static final class drawable {
-		public static final int pl_patternview_arrow_alpha = 0x7f02003f;
-		public static final int pl_patternview_circle_alpha = 0x7f020040;
-		public static final int pl_patternview_circle_default_alpha = 0x7f020041;
-		public static final int pl_patternview_dot_default = 0x7f020042;
-		public static final int pl_patternview_dot_touched = 0x7f020043;
+		public static final int pl_patternview_arrow_alpha = 0x7f020040;
+		public static final int pl_patternview_circle_alpha = 0x7f020041;
+		public static final int pl_patternview_circle_default_alpha = 0x7f020042;
+		public static final int pl_patternview_dot_default = 0x7f020043;
+		public static final int pl_patternview_dot_touched = 0x7f020044;
 	}
 	public static final class id {
 		public static final int lock_height = 0x7f0d0020;
 		public static final int lock_width = 0x7f0d0021;
-		public static final int pl_button_container = 0x7f0d0065;
-		public static final int pl_left_button = 0x7f0d0066;
-		public static final int pl_message_text = 0x7f0d0063;
-		public static final int pl_pattern = 0x7f0d0064;
-		public static final int pl_right_button = 0x7f0d0067;
+		public static final int pl_button_container = 0x7f0d0066;
+		public static final int pl_left_button = 0x7f0d0067;
+		public static final int pl_message_text = 0x7f0d0064;
+		public static final int pl_pattern = 0x7f0d0065;
+		public static final int pl_right_button = 0x7f0d0068;
 		public static final int square = 0x7f0d0022;
 	}
 	public static final class layout {
@@ -79,5 +80,7 @@ public final class R {
 		public static final int PatternView_pathColor = 4;
 		public static final int PatternView_regularColor = 1;
 		public static final int PatternView_successColor = 3;
+		public static final int[] ShimmerView = { 0x7f010051 };
+		public static final int ShimmerView_reflectionColor = 0;
 	}
 }

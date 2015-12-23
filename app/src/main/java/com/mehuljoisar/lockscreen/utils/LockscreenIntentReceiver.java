@@ -4,8 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.os.Build;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,11 +12,13 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.mehuljoisar.lockscreen.PatternListener;
+import com.mehuljoisar.lockscreen.pattern.PatternListener;
 import com.mehuljoisar.lockscreen.R;
 import com.mehuljoisar.lockscreen.db.DataBaseUtility;
+import com.mehuljoisar.lockscreen.lib.ResideLayout;
+import com.mehuljoisar.lockscreen.shimmer.Shimmer;
+import com.mehuljoisar.lockscreen.shimmer.ShimmerTextView;
 
 import me.zhanghai.patternlock.PatternView;
 import me.zhanghai.patternlock.ViewAccessibilityCompat;
@@ -70,14 +70,36 @@ public class LockscreenIntentReceiver extends BroadcastReceiver {
             patternView.setInStealthMode(pl.isStealthModeEnabled());
             patternView.setOnPatternListener(pl);
             ViewAccessibilityCompat.announceForAccessibility(messageText, messageText.getText());
-
-            mTopView.findViewById(R.id.unlockbutton).setOnClickListener(new View.OnClickListener() {
+            ResideLayout resideLayout=(ResideLayout)mTopView.findViewById(R.id.reside_layout);
+            resideLayout.setPanelSlideListener(new ResideLayout.PanelSlideListener() {
                 @Override
-                public void onClick(View v) {
-                    patternViewGroup.removeView(mTopView);
-                    mTopView = null;
+                public void onPanelSlide(View panel, float slideOffset) {
+                    if (slideOffset == 1) {
+                        patternViewGroup.removeView(mTopView);
+                        mTopView = null;
+                    }
+                }
+
+                @Override
+                public void onPanelOpened(View panel) {
+
+                }
+
+                @Override
+                public void onPanelClosed(View panel) {
+
                 }
             });
+            ShimmerTextView tv=(ShimmerTextView)mTopView.findViewById(R.id.shimmer_tv);
+            Shimmer s=new Shimmer();
+            s.start(tv);
+//            setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    patternViewGroup.removeView(mTopView);
+//                    mTopView = null;
+//                }
+//            });
             wm.addView(patternViewGroup,params);
             patternViewGroup.addView(mTopView, params);
 		}catch (Exception e) {

@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="PatternLockTheme"><attr format="reference" name="patternViewStyle"/></declare-styleable>
     <declare-styleable name="PatternView"><attr name="aspect"><enum name="square" value="0"/><enum name="lock_width" value="1"/><enum name="lock_height" value="2"/></attr><attr format="color|reference" name="regularColor"/><attr format="color|reference" name="errorColor"/><attr format="color|reference" name="successColor"/><attr format="color|reference" name="pathColor"/><attr format="reference" name="dotDrawableDefault"/><attr format="reference" name="dotDrawableTouched"/><attr format="reference" name="circleDrawableDefault"/><attr format="reference" name="circleDrawable"/><attr format="reference" name="arrowUpDrawable"/></declare-styleable>
+    <declare-styleable name="ShimmerView"><attr format="color" name="reflectionColor"/></declare-styleable>
     <!-- From: file:/C:/Users/Mohammad/AndroidStudioProjects/LockScreenApp/library/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="pl_access_pattern_cell_added">Cell added</string>

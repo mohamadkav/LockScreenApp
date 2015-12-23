@@ -37,4 +37,7 @@
         <!-- Default PatternView style. -->
         <attr name="patternViewStyle" format="reference" />
     </declare-styleable>
+    <declare-styleable name="ShimmerView">
+        <attr name="reflectionColor" format="color"/>
+    </declare-styleable>
 </resources>

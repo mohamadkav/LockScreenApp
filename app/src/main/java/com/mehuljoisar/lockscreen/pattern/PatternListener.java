@@ -1,4 +1,4 @@
-package com.mehuljoisar.lockscreen;
+package com.mehuljoisar.lockscreen.pattern;
 
 import android.content.Context;
 import android.view.ViewGroup;
