@@ -29,42 +29,42 @@ public final class R {
 		public static final int pl_patternview_dot_touched = 0x7f020044;
 	}
 	public static final class id {
-		public static final int lock_height = 0x7f0d0020;
-		public static final int lock_width = 0x7f0d0021;
-		public static final int pl_button_container = 0x7f0d0066;
-		public static final int pl_left_button = 0x7f0d0067;
-		public static final int pl_message_text = 0x7f0d0064;
-		public static final int pl_pattern = 0x7f0d0065;
-		public static final int pl_right_button = 0x7f0d0068;
-		public static final int square = 0x7f0d0022;
+		public static final int lock_height = 0x7f0e0020;
+		public static final int lock_width = 0x7f0e0021;
+		public static final int pl_button_container = 0x7f0e0066;
+		public static final int pl_left_button = 0x7f0e0067;
+		public static final int pl_message_text = 0x7f0e0064;
+		public static final int pl_pattern = 0x7f0e0065;
+		public static final int pl_right_button = 0x7f0e0068;
+		public static final int square = 0x7f0e0022;
 	}
 	public static final class layout {
 		public static final int pl_base_pattern_activity = 0x7f030023;
 		public static final int pl_base_pattern_activity_view = 0x7f030024;
 	}
 	public static final class string {
-		public static final int pl_access_pattern_cell_added = 0x7f060012;
-		public static final int pl_access_pattern_cleared = 0x7f060013;
-		public static final int pl_access_pattern_detected = 0x7f060014;
-		public static final int pl_access_pattern_start = 0x7f060015;
-		public static final int pl_cancel = 0x7f060016;
-		public static final int pl_confirm = 0x7f060017;
-		public static final int pl_confirm_pattern = 0x7f060018;
-		public static final int pl_continue = 0x7f060019;
-		public static final int pl_draw_pattern = 0x7f06001a;
-		public static final int pl_draw_pattern_to_unlock = 0x7f06001b;
-		public static final int pl_forgot_pattern = 0x7f06001c;
-		public static final int pl_pattern_confirmed = 0x7f06001d;
-		public static final int pl_pattern_recorded = 0x7f06001e;
-		public static final int pl_pattern_too_short = 0x7f06001f;
-		public static final int pl_recording_pattern = 0x7f060020;
-		public static final int pl_redraw = 0x7f060021;
-		public static final int pl_wrong_pattern = 0x7f060022;
+		public static final int pl_access_pattern_cell_added = 0x7f070012;
+		public static final int pl_access_pattern_cleared = 0x7f070013;
+		public static final int pl_access_pattern_detected = 0x7f070014;
+		public static final int pl_access_pattern_start = 0x7f070015;
+		public static final int pl_cancel = 0x7f070016;
+		public static final int pl_confirm = 0x7f070017;
+		public static final int pl_confirm_pattern = 0x7f070018;
+		public static final int pl_continue = 0x7f070019;
+		public static final int pl_draw_pattern = 0x7f07001a;
+		public static final int pl_draw_pattern_to_unlock = 0x7f07001b;
+		public static final int pl_forgot_pattern = 0x7f07001c;
+		public static final int pl_pattern_confirmed = 0x7f07001d;
+		public static final int pl_pattern_recorded = 0x7f07001e;
+		public static final int pl_pattern_too_short = 0x7f07001f;
+		public static final int pl_recording_pattern = 0x7f070020;
+		public static final int pl_redraw = 0x7f070021;
+		public static final int pl_wrong_pattern = 0x7f070022;
 	}
 	public static final class style {
-		public static final int PatternView = 0x7f0800ad;
-		public static final int PatternView_Holo = 0x7f0800ae;
-		public static final int PatternView_Holo_Light = 0x7f0800af;
+		public static final int PatternView = 0x7f0900ad;
+		public static final int PatternView_Holo = 0x7f0900ae;
+		public static final int PatternView_Holo_Light = 0x7f0900af;
 	}
 	public static final class styleable {
 		public static final int[] PatternLockTheme = { 0x7f010037 };
