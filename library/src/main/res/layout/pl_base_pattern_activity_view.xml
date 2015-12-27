@@ -15,21 +15,19 @@
     android:background="#16a5d7"
     android:animateLayoutChanges="true">
 
-    <TextView
-        android:id="@+id/pl_message_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?android:attr/listPreferredItemHeight"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
     <!-- This FrameLayout is for proper divider drawing. -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:padding="16dp">
-
+        <TextView
+            android:id="@+id/pl_message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         <me.zhanghai.patternlock.PatternView
             android:id="@+id/pl_pattern"
             android:layout_width="match_parent"

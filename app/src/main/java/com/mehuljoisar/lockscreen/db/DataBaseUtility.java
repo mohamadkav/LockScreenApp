@@ -8,7 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.mehuljoisar.lockscreen.base.ApplicationClass;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class DataBaseUtility {
     private SQLiteDatabase db;
@@ -33,8 +35,24 @@ public class DataBaseUtility {
                 }
             }
             instance.db.execSQL("CREATE TABLE IF NOT EXISTS PATTERN(id INTEGER PRIMARY KEY,pattern VARCHAR);");
+            instance.db.execSQL("CREATE TABLE IF NOT EXISTS LOCK_IMAGES(id INTEGER PRIMARY KEY,image BLOB,updated VARCHAR);");
         }
         return instance;
+    }
+
+    public void addImage(byte[]image,String updatedAt){
+        SimpleDateFormat sd=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        try{
+            Date d=(Date)sd.parse(updatedAt);
+            String toBeSaved=d.getTime()+"";
+            ContentValues contentValues=new ContentValues();
+            contentValues.put("updated",toBeSaved);
+            contentValues.put("image",image);
+            db.insert("LOCK_IMAGES",null,contentValues);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
     public void setOrUpdatePattern(String pattern){
         ArrayList<String> array_list=new ArrayList<>();
