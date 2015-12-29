@@ -46,6 +46,8 @@ dependencies {
     testCompile 'org.robolectric:robolectric:2.4'
     compile files('src/httpcore-4.4.4.jar')
     compile files('src/commons-cli-1.2.jar')
+    compile files('jackson-mapper-lgpl-1.9.13.jar')
+    compile files('jackson-core-lgpl-1.9.13.jar')
 }
 
 

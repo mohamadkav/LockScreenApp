@@ -9,20 +9,6 @@
         <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-286d0baff683489b044df953c3c418a9625208f7.jar" />
     </item>
     <item
-        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="07b16c8c86824d68cdaa22bd67c173d72d4642cb">
-        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-49ea66f8eb8d06096ce532497ad5a0aad88f8b23.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c2907f56a3ceeca8137e07623e495633ab5daa8e.jar" />
-    </item>
-    <item
         jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\libs\commons-cli-1.2.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -37,11 +23,25 @@
         <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-be8f5963896fcc078cf518cc929e724ef557931c.jar" />
     </item>
     <item
-        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\libs\httpcore-4.4.4.jar"
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\libs\jackson-mapper-lgpl-1.9.13.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
-        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\httpcore-4.4.4-92c3f9c9b744003f83e861fa91ed1d5fae8fd770.jar" />
+        sha1="562912b6ea695a2ae6411b9e4aed21153f46dde1">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\jackson-mapper-lgpl-1.9.13-9d24af5ac36765e111c0332ad8296868880d59db.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-c2907f56a3ceeca8137e07623e495633ab5daa8e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\libs\jackson-core-lgpl-1.9.13.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="daf3ed9350a24e505a9ef77a713b9e2b66135993">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\jackson-core-lgpl-1.9.13-4d8b4c59768916e5346d07d5abcab6be50944c04.jar" />
     </item>
     <item
         jar="C:\Users\Mohammad\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
@@ -51,11 +51,25 @@
         <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-51eb7d59b7d0d2518d41b47955a63160401efd4d.jar" />
     </item>
     <item
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="07b16c8c86824d68cdaa22bd67c173d72d4642cb">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-49ea66f8eb8d06096ce532497ad5a0aad88f8b23.jar" />
+    </item>
+    <item
         jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
         <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\classes-fe85cc3f7c15fcee816d40e74fb6630d17e3dec0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\exploded-aar\com.mcxiaoke.volley\android-volley-master\1.0.19\jars\libs\httpcore-4.4.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
+        <dex dex="C:\Users\Mohammad\AndroidStudioProjects\LockScreenApp\app\build\intermediates\pre-dexed\debug\httpcore-4.4.4-92c3f9c9b744003f83e861fa91ed1d5fae8fd770.jar" />
     </item>
 
 </items>

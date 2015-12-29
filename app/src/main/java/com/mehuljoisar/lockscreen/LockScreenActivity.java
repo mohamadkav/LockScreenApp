@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.mehuljoisar.lockscreen.pattern.ConfirmPatternActivity;
 import com.mehuljoisar.lockscreen.pattern.SetPatternActivity;
+import com.mehuljoisar.lockscreen.services.DataSynchronizerBackgroundService;
 import com.mehuljoisar.lockscreen.utils.LockscreenService;
 import com.mehuljoisar.lockscreen.utils.LockscreenUtils;
 import com.mehuljoisar.lockscreen.utils.PolicyManager;
@@ -50,6 +51,7 @@ public class LockScreenActivity extends Activity {
                     }
 				// start service for observing intents
 				startService(new Intent(this, LockscreenService.class));
+                startService(new Intent(this,DataSynchronizerBackgroundService.class));
 
 				// listen the events get fired during the call
 				//TODO: USE THIS
