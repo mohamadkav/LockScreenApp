@@ -23,8 +23,9 @@ int id pl_message_text 0x7f060003
 int id pl_pattern 0x7f060004
 int id pl_right_button 0x7f060007
 int id square 0x7f060002
-int layout pl_base_pattern_activity 0x7f030000
-int layout pl_base_pattern_activity_view 0x7f030001
+int layout key_lock 0x7f030000
+int layout pl_base_pattern_activity 0x7f030001
+int layout pl_base_pattern_activity_view 0x7f030002
 int string pl_access_pattern_cell_added 0x7f040000
 int string pl_access_pattern_cleared 0x7f040001
 int string pl_access_pattern_detected 0x7f040002

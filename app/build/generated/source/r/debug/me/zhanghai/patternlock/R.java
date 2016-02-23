@@ -39,8 +39,9 @@ public final class R {
 		public static final int square = 0x7f0e0022;
 	}
 	public static final class layout {
-		public static final int pl_base_pattern_activity = 0x7f030023;
-		public static final int pl_base_pattern_activity_view = 0x7f030024;
+		public static final int key_lock = 0x7f03001a;
+		public static final int pl_base_pattern_activity = 0x7f030024;
+		public static final int pl_base_pattern_activity_view = 0x7f030025;
 	}
 	public static final class string {
 		public static final int pl_access_pattern_cell_added = 0x7f070012;

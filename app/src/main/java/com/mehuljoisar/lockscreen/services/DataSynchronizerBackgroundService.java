@@ -49,7 +49,7 @@ public class DataSynchronizerBackgroundService extends Service{
     }
     public static void syncDBWithServer(Context context){
         try {
-            RequestQueue queue = Volley.newRequestQueue(context);
+/*            RequestQueue queue = Volley.newRequestQueue(context);
             HashMap<String, String> params = new HashMap<>();
             params.put("token", "29ecefddcc1704ee78f4f177a7452caca06a9d8055583dd347c922e8a914487bf04e61198faa2d88abc2f4e7b6da9d31");
             params.put("device", "e2c2810b440eb22a");
@@ -71,7 +71,7 @@ public class DataSynchronizerBackgroundService extends Service{
                             error.printStackTrace();
                         }
                     });
-            queue.add(jsonArrayRequest);
+            queue.add(jsonArrayRequest);*/
         }catch (Exception e){
             e.printStackTrace();
         }
